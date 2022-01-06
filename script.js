@@ -13,11 +13,10 @@ window.onload = generateCode;
 function fillCircles() {
   const answer = Math.floor(Math.random() * 6);
   for (let i = 0; i < circles.length; i += 1) {
-    circles[i].style.backgroundColor = Math.floor(Math.random()*16777215).toString(16);
-    // if (i === answer) {
-    //   console.log(i);
-    // }
-    // console.log(answer);
+    if (i === answer) {
+      circles[i].style.backgroundColor = `rgb (${color1} ${color2} ${color3})`;
+    }
+    circles[i].style.backgroundColor = `#${Math.floor(Math.random() * 16777000).toString(16)}`;
   }
 }
 colorCode.addEventListener('click', fillCircles);
