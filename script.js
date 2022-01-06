@@ -12,9 +12,11 @@ window.onload = generateCode;
 
 function fillCircles() {
   const answer = Math.floor(Math.random() * 6);
+  let teste = colorCode.innerText;
+  console.log(teste);
   for (let i = 0; i < circles.length; i += 1) {
     if (i === answer) {
-      circles[i].style.backgroundColor = `rgb (${color1} ${color2} ${color3})`;
+      circles[i].style.backgroundColor = `rgb (${teste})`;
     }
     circles[i].style.backgroundColor = `#${Math.floor(Math.random() * 16777000).toString(16)}`;
   }
