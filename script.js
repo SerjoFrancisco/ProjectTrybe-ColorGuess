@@ -1,7 +1,7 @@
 const colorCode = document.getElementById('rgb-color');
 const circles = document.getElementsByClassName('ball');
 const gameText = document.getElementById('answer');
-const reset = document.getElementById('reset');
+const reset = document.getElementById('reset-game');
 const score = document.getElementById('score');
 
 function generateCode() {
@@ -25,7 +25,7 @@ function fillCircles() {
 
 function colorGuess() {
   if (event.target.style.backgroundColor === `rgb${colorCode.innerText}`) {
-    gameText.innerText = 'Acertou';
+    gameText.innerText = 'Acertou!';
     score.innerText = Number(score.innerText) + 3;
   } else {
     gameText.innerText = 'Errou! Tente novamente!';
