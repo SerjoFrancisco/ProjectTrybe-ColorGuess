@@ -23,8 +23,8 @@ function fillCircles() {
   }
 }
 
-function colorGuess() {
-  if (event.target.style.backgroundColor === `rgb${colorCode.innerText}`) {
+function colorGuess({target}) {
+  if (target.style.backgroundColor === `rgb${colorCode.innerText}`) {
     gameText.innerText = 'Acertou!';
     score.innerText = Number(score.innerText) + 3;
   } else {
